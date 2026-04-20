@@ -1,0 +1,30 @@
+URL - https://beamdeflector-27.streamlit.app/
+
+BEAM DEFLECTION CALCULATOR — VALIDATION STUDY
+==============================================
+
+Problem: Simply supported beam, point load at midspan
+------------------------------------------------------
+L  = 5 m
+P  = 10 kN (at x = 2.5 m)
+E  = 200 GPa (structural steel)
+I  = 100 cm⁴
+
+Textbook formula:
+  δ_max = PL³ / 48EI
+        = (10000 × 125) / (48 × 200×10⁹ × 100×10⁻⁸)
+        = 1,250,000 / 9,600,000
+        = 0.13021 m = 130.21 mm
+
+Comparative results:
+  Quantity              Textbook       Tool output    Error
+  -----------------------------------------------------------
+  Reaction R_A          5.00 kN        5.00 kN        0.00%
+  Reaction R_B          5.00 kN        5.00 kN        0.00%
+  Max shear force       ±5.00 kN       ±5.00 kN       0.00%
+  Max bending moment    12.50 kN·m     12.50 kN·m     0.00%
+  Max deflection        130.21 mm      130.21 mm      0.00%
+  Location of δ_max     x = 2.5 m      x = 2.5 m      —
+
+Conclusion: Tool output matches closed-form analytical solution exactly.
+
